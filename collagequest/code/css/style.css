@@ -1,0 +1,176 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  justify-content:center;
+  min-height: 100vh;
+  background-image: url(/assets/bg.png);
+  background-size: cover;
+  background-position: center;
+}
+.wrapper{
+  width: 450px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+.wrapper header{
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+}
+header .icons{
+  display: flex;
+}
+header .icons span{
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #878787;
+  text-align: center;
+  line-height: 38px;
+  font-size: 1.9rem;
+  user-select: none;
+  border-radius: 50%;
+}
+.icons span:last-child{
+  margin-right: -10px;
+}
+header .icons span:hover{
+  background: #f2f2f2;
+}
+header .current-date{
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+.calendar{
+  padding: 20px;
+}
+.calendar ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+.calendar .days{
+  margin-bottom: 20px;
+}
+.calendar li{
+  color: #333;
+  width: calc(100% / 7);
+  font-size: 1.07rem;
+}
+.calendar .weeks li{
+  font-weight: 500;
+  cursor: default;
+}
+.calendar .days li{
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+.days li.inactive{
+  color: #aaa;
+}
+.days li.active{
+  color: #fff;
+}
+.days li::before{
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.days li.active::before{
+  background:#64CCC5;
+}
+.days li:not(.active):hover::before{
+  background: #f2f2f2;
+}
+#time-slots
+{
+  padding: 20px;
+  border-radius: 25px;
+}
+#colorChangeButton {
+  height: 40px;
+  width: 100px;
+  background-color: white;
+  color:black;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  text-shadow: #333;
+}
+
+#colorChangeButton.clicked {
+  background-color: black;
+  color: white;
+  font-weight: bolder;
+  border-radius: 25px;
+  text-shadow: #333;
+}
+
+.button
+{
+  height: 40px;
+  width: 100px;
+  font-weight: 450;
+  border-radius: 25px;
+}
+
+.button:hover
+{
+  background-color: white;
+  color:#64CCC5;
+  
+}
+.navbar {
+  overflow: hidden;
+  background-color: #34495e; /* Navy blue background */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add drop shadow */
+  position: fixed; /* Fix the navbar at the top of the screen */
+  width: 100%; /* Make the navbar fill the entire width */
+  top: 0; /* Position it at the top of the screen */
+  left: 0; /* Position it at the left of the screen */
+  z-index: 1000;/* Set a high z-index to ensure it appears above other elements */
+
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #ffffff; /* White font color */
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border-radius: 25px; /* Add smooth transition for hover effect */
+}
+
+.navbar a:hover {
+  background-color: #2c3e50;
+  border-radius: 25px; /* Slightly darker blue on hover */
+}
+
+.navbar a.active {
+  background-color: #e74c3c; 
+  border-radius:25px ;/* Red for active link */
+}
+

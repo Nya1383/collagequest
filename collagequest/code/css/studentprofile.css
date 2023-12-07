@@ -1,0 +1,80 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(/assets/bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.profile-card {
+    width: 80%;
+    max-width: 500px;
+    padding: 40px;
+    background-color: white; /* Semi-transparent white background */
+    border-radius: 15px;
+    box-shadow:  black; /* White shadow effect */
+}
+
+.profile-card h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.profile-details {
+    margin-top: 20px;
+}
+
+.profile-details label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.profile-details span {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: #DAFFFB;
+    margin-bottom: 15px;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1px;
+    box-shadow: 0 0 1px black;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #34495e; /* Navy blue background */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add drop shadow */
+  position: fixed; /* Fix the navbar at the top of the screen */
+  width: 100%; /* Make the navbar fill the entire width */
+  top: 0; /* Position it at the top of the screen */
+  left: 0; /* Position it at the left of the screen */
+  z-index: 1000; /* Set a high z-index to ensure it appears above other elements */
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #ffffff; /* White font color */
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s; /* Add smooth transition for hover effect */
+}
+
+.navbar a:hover {
+  background-color: #2c3e50; /* Slightly darker blue on hover */
+}
+
+.navbar a.active {
+  background-color: #e74c3c; /* Red for active link */
+}
